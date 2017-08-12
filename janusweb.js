@@ -105042,7 +105042,7 @@ function () {
           this.loading = false;
           elation.events.fire({element: this, type: 'room_change', data: url});
         }
-        if (!pos) pos = this.currentroom.playerstartposition;
+        //if (!pos) pos = this.currentroom.playerstartposition;
         if (pos) {
           //player.properties.position.fromArray(pos);
           //player.properties.orientation.copy(this.currentroom.playerstartorientation);
