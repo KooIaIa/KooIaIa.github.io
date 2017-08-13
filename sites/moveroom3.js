@@ -9,7 +9,7 @@ room.update = function(dt)
 	if (bool == 1)
 	{
 		for (obj in room.objects){
-			obj.pos = translate(translate(player.pos,obj.pos),Vector(-1, 0, 0) );
+			room.objects[obj].pos = translate(translate(player.pos,room.objects[obj].pos),player.dir);
 		}	
 		bool = 0;
 	}
