@@ -101728,11 +101728,11 @@ function () {
       elation.events.fire({element: this, type: 'room_active', data: this});
     }
     this.setPlayerPosition = function(pos, orientation) {
-      if (!pos) {
+      //if (!pos) {
         //pos = this.playerstartposition;
         //orientation = this.playerstartorientation;
-      }
-      var player = this.engine.client.player;
+      //}
+      //var player = this.engine.client.player;
       //player.reset_position();
       player.properties.movestrength = 80 * this.properties.walk_speed;
       player.properties.runstrength = 80 * this.properties.run_speed;
