@@ -6,7 +6,7 @@ var bool = 1;
 
 room.update = function(dt)
 {
-	if (bool = 1)
+	if (bool == 1)
 	{
 	room.objects["kirby"].pos = Vector(player.pos) + Vector(room.objects["kirby"].pos) + Vector(1, 0, 0); 
 	bool = 0;
