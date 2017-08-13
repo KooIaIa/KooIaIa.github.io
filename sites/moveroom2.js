@@ -6,7 +6,7 @@ var isJanusWeb = (typeof elation != 'undefined');
 room.update = function(dt)
 {
 	
-	room.objects["kirby"].pos = Vector(player.pos)
+	room.objects["kirby"].pos = player.pos
 	//room.objects["testObject"].pos.x = "15";
 	
 	timer = (timer + dt * 0.001)
