@@ -101733,7 +101733,7 @@ function () {
         //orientation = this.playerstartorientation;
       }
       var player = this.engine.client.player;
-      player.reset_position();
+      //player.reset_position();
       player.properties.movestrength = 80 * this.properties.walk_speed;
       player.properties.runstrength = 80 * this.properties.run_speed;
       player.cursor_visible = elation.utils.any(this.cursor_visible, true);
@@ -102126,8 +102126,8 @@ function () {
 //}), Math.random() * 500);
         }
         // set player position based on room info
-        this.playerstartposition = room.pos;
-        this.playerstartorientation = room.orientation;
+        //this.playerstartposition = room.pos;
+        //this.playerstartorientation = room.orientation;
 
         if (room.skybox_left_id) this.properties.skybox_left = room.skybox_left_id;
         if (room.skybox_right_id) this.properties.skybox_right = room.skybox_right_id;
