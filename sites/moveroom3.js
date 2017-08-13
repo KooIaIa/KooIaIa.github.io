@@ -9,9 +9,11 @@ room.update = function(dt)
 	if (bool == 1)
 	{
 		for (obj in room.objects){
-			room.objects[obj].pos = translate(translate(player.pos,room.objects[obj].pos),player.dir);
+			//room.objects[obj].pos = translate(translate(player.pos,room.objects[obj].pos),player.dir);
+			room.objects[obj].pos = translate(player.pos,player.dir);
+			//room.objects[obj].col = scalarMultiply(GetRaveColor(Math.round(frame * 0.5) % 6),1);
 		}	
-		bool = 0;
+		bool = 1;
 	}
 	timer = (timer + dt * 0.001)
 }
