@@ -101723,14 +101723,14 @@ function () {
       this.setFog();
       this.updateBloom();
       this.setNearFar();
-     // this.setPlayerPosition();
+      this.setPlayerPosition();
       this.active = true;
       elation.events.fire({element: this, type: 'room_active', data: this});
     }
     this.setPlayerPosition = function(pos, orientation) {
       if (!pos) {
-        //pos = this.playerstartposition;
-        //orientation = this.playerstartorientation;
+        pos = this.playerstartposition;
+        orientation = this.playerstartorientation;
       }
       var player = this.engine.client.player;
       //player.reset_position();
@@ -101738,7 +101738,7 @@ function () {
       player.properties.runstrength = 80 * this.properties.run_speed;
       player.cursor_visible = elation.utils.any(this.cursor_visible, true);
       // FIXME - for some reason the above call sometimes orients the player backwards.  Doing it on a delay fixes it...
-      //setTimeout(elation.bind(player, player.reset_position), 0);
+      setTimeout(elation.bind(player, player.reset_position), 0);
     }
     this.setSkybox = function() {
       if (!this.loaded) return;
