@@ -105044,8 +105044,8 @@ function () {
         }
         if (!pos) pos = this.currentroom.playerstartposition;
         if (pos) {
-          player.properties.position.fromArray(pos);
-          player.properties.orientation.copy(this.currentroom.playerstartorientation);
+          //player.properties.position.fromArray(pos);
+          //player.properties.orientation.copy(this.currentroom.playerstartorientation);
         }
         if (changed && !skipURLUpdate) {
           this.updateClientURL(url);
