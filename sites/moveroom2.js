@@ -8,7 +8,8 @@ room.update = function(dt)
 {
 	if (bool == 1)
 	{
-	room.objects["kirby"].pos = translate(translate(Vector(player.pos),Vector(room.objects["kirby"].pos)),Vector(1, 0, 0) ); 
+	//room.objects["kirby"].pos = translate(translate(Vector(player.pos),Vector(room.objects["kirby"].pos)),Vector(1, 0, 0) ); 
+	room.objects["kirby"].pos = translate(translate(player.pos,room.objects["kirby"].pos),Vector(1, 0, 0) ); 
 	bool = 0;
 	}
 	timer = (timer + dt * 0.001)
