@@ -101729,8 +101729,8 @@ function () {
     }
     this.setPlayerPosition = function(pos, orientation) {
       if (!pos) {
-        //pos = this.playerstartposition;
-        //orientation = this.playerstartorientation;
+        pos = this.playerstartposition;
+        orientation = this.playerstartorientation;
       }
       var player = this.engine.client.player;
       //player.reset_position();
@@ -101738,7 +101738,7 @@ function () {
       player.properties.runstrength = 80 * this.properties.run_speed;
       player.cursor_visible = elation.utils.any(this.cursor_visible, true);
       // FIXME - for some reason the above call sometimes orients the player backwards.  Doing it on a delay fixes it...
-      //setTimeout(elation.bind(player, player.reset_position), 0);
+      setTimeout(elation.bind(player, player.reset_position), 0);
     }
     this.setSkybox = function() {
       if (!this.loaded) return;
@@ -102126,8 +102126,8 @@ function () {
 //}), Math.random() * 500);
         }
         // set player position based on room info
-        //this.playerstartposition = room.pos;
-        //this.playerstartorientation = room.orientation;
+        this.playerstartposition = room.pos;
+        this.playerstartorientation = room.orientation;
 
         if (room.skybox_left_id) this.properties.skybox_left = room.skybox_left_id;
         if (room.skybox_right_id) this.properties.skybox_right = room.skybox_right_id;
@@ -103485,8 +103485,8 @@ function () {
           }
           setTimeout(function() {
             elation.events.add(player, 'thing_change', doPlayerChange);
-            //playerStartPosition.copy(player.properties.position);
-            //playerStartOrientation.copy(player.properties.orientation);
+            playerStartPosition.copy(player.properties.position);
+            playerStartOrientation.copy(player.properties.orientation);
           }, 1000);
 
           // report FPS every 15 seconds
@@ -105042,10 +105042,10 @@ function () {
           this.loading = false;
           elation.events.fire({element: this, type: 'room_change', data: url});
         }
-        //if (!pos) pos = this.currentroom.playerstartposition;
+        if (!pos) pos = this.currentroom.playerstartposition;
         if (pos) {
-          //player.properties.position.fromArray(pos);
-          //player.properties.orientation.copy(this.currentroom.playerstartorientation);
+          player.properties.position.fromArray(pos);
+          player.properties.orientation.copy(this.currentroom.playerstartorientation);
         }
         if (changed && !skipURLUpdate) {
           this.updateClientURL(url);
