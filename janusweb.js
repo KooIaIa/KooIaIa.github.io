@@ -101738,7 +101738,7 @@ function () {
       player.properties.runstrength = 80 * this.properties.run_speed;
       player.cursor_visible = elation.utils.any(this.cursor_visible, true);
       // FIXME - for some reason the above call sometimes orients the player backwards.  Doing it on a delay fixes it...
-      setTimeout(elation.bind(player, player.reset_position), 0);
+      //setTimeout(elation.bind(player, player.reset_position), 0);
     }
     this.setSkybox = function() {
       if (!this.loaded) return;
@@ -103485,8 +103485,8 @@ function () {
           }
           setTimeout(function() {
             elation.events.add(player, 'thing_change', doPlayerChange);
-            playerStartPosition.copy(player.properties.position);
-            playerStartOrientation.copy(player.properties.orientation);
+            //playerStartPosition.copy(player.properties.position);
+            //playerStartOrientation.copy(player.properties.orientation);
           }, 1000);
 
           // report FPS every 15 seconds
