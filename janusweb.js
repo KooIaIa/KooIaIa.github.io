@@ -101723,7 +101723,7 @@ function () {
       this.setFog();
       this.updateBloom();
       this.setNearFar();
-      this.setPlayerPosition();
+     // this.setPlayerPosition();
       this.active = true;
       elation.events.fire({element: this, type: 'room_active', data: this});
     }
