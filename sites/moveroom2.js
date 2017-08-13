@@ -2,14 +2,20 @@ var color = 0;
 var frame = 0;
 var timer = 0.5;
 var isJanusWeb = (typeof elation != 'undefined');
+var bool = 1;
 
 room.update = function(dt)
 {
-	
-	room.objects["kirby"].pos = Vector(player.pos)
+	if (bool = 1)
+	{
+	room.objects["kirby"].pos = Vector(player.pos) + Vector(room.objects["kirby"].pos); // + Vector(x, y, z) 
+	bool = 0;
+	}
+	timer = (timer + dt * 0.001)
+}
 	//room.objects["testObject"].pos.x = "15";
 	
-	timer = (timer + dt * 0.001)
+
 	/*
 	if (timer > 0.5)
 	{
@@ -47,4 +53,3 @@ room.update = function(dt)
 			room.objects['js_paintings'].col = scalarMultiply(translate(Vector(2,2,2),GetRaveColor(Math.round(frame * 0.5) % 6)),1.0);
 		}
 	}*/
-}
