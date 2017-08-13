@@ -101729,8 +101729,8 @@ function () {
     }
     this.setPlayerPosition = function(pos, orientation) {
       if (!pos) {
-        pos = this.playerstartposition;
-        orientation = this.playerstartorientation;
+        //pos = this.playerstartposition;
+        //orientation = this.playerstartorientation;
       }
       var player = this.engine.client.player;
       //player.reset_position();
