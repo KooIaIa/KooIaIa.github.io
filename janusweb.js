@@ -101733,7 +101733,7 @@ function () {
         orientation = this.playerstartorientation;
       }
       var player = this.engine.client.player;
-      //player.reset_position();
+      player.reset_position();
       player.properties.movestrength = 80 * this.properties.walk_speed;
       player.properties.runstrength = 80 * this.properties.run_speed;
       player.cursor_visible = elation.utils.any(this.cursor_visible, true);
@@ -105007,7 +105007,7 @@ function () {
       return this.load(dataurl, makeactive, baseurl)
     }
     this.setActiveRoom = function(url, pos, skipURLUpdate) {
-      //this.clear();
+      this.clear();
 
       var room = false;
       this.loading = true;
