@@ -2,7 +2,7 @@ room.onLoad = function()
 {
 	for (obj in room.objects)
 	{
-		obj.pos = Vector(player.pos + obj.pos)
+		//obj.pos = Vector(player.pos + obj.pos)
 	}
 	
 	/*
