@@ -1,21 +1,3 @@
-room.onLoad = function()
-{
-	for (obj in room.objects)
-	{
-		obj.pos = Vector(player.pos)
-	}
-	
-	/*
-	var group = ['js_image1', 'js_image2', 'js_image3'];
-    room.objects["object_js_id_here"].pos = Vector(player.pos);
-	for (obj_id in group)
-	{
-    room.objects[obj_id].pos = Vector(player.pos);
-	}
-	*/
-
-}
-
 var color = 0;
 var frame = 0;
 var timer = 0.5;
@@ -25,7 +7,7 @@ room.update = function(dt)
 {
 	
 	room.objects["kirby"].pos = Vector(player.pos)
-	
+	//room.objects["testObject"].pos.x = "15";
 	
 	timer = (timer + dt * 0.001)
 	/*
