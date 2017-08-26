@@ -104739,7 +104739,7 @@ function () {
       selfavatar: false,
       maxmemory: 2048,
       comfortmode: false,
-      downloadcache: true,
+      downloadcache: false,
       antialiasing: true,
       assetshaders: true,
       assetimages: true,
