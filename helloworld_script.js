@@ -10,7 +10,7 @@ room.update = function(dt)
 	{
 		for (obj in room.objects){
 			//room.objects[obj].pos = translate(translate(player.pos,room.objects[obj].pos),player.dir);
-			room.objects[obj].scale = V(Math.sin(performance.now() / 1000));
+			//room.objects[obj].scale = V(Math.sin(performance.now() / 1000));
 			//room.objects[obj].col = scalarMultiply(GetRaveColor(Math.round(frame * 0.5) % 6),1);
 		}	
 		bool = 1;
